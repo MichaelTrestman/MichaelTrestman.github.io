@@ -1,0 +1,77 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scootchbots Simulator and Info!</title>
+    <!-- <link rel="stylesheet" href="foundation/css/foundation.css" /> -->
+    <!-- // <script src="https://gist.github.com/ryanpitts/1230172.js"></script> -->
+    <link rel="stylesheet" href="foundation/css/stylez.css" />
+    <script src="foundation/js/vendor/modernizr.js"></script>
+</head>
+<body>
+
+<div class="row">
+  <div class="header large-12 columns"  >
+    <h1> Scootchbots Simulator and Info!</h1>
+  </div>
+</div>
+    
+<!-- <div class="row"> -->
+  <!-- <div class="large-12 columns"> -->
+  <div class="stuff">
+    <div class="left sidebar">
+      <h2> Scootchbots Info </h2>
+      <p> Scootchbots are a species of autonomous agents invented by supergenius programmer Michael Trestman in 2014. They are indestructable beings of pure data that cannot be destroyed. They wander the Milky Way Galaxy, riding currents of cosmic energy, ever in search of a balance between yin and yang, love and hate, twi and laa.<br>
+      Pythia of Delphi prophesied that scootchbots would eventually fill the cosmos, bringing about the end of all things, but Nicodemus of the Rosebush foretold that only scootchbots could <emph> save </emph> the Galaxy by stopping Gmork the SpaceWulf, who dwells in the <a href="http://www.space.com/24362-milky-way-black-hole-gas-cloud.html"> supermassive black hole </a> at the center of the Milky Way, draining the soul of night and devouring all things. 
+      </p>
+    </div>
+    <div class="gmork">
+      
+    </div>
+    <div class="right sidebar">
+      <h3> scootch bots simulator controls </h3>
+
+      <p> <br> p to pause and o to unpause
+        <br> the green circle attracts the bots
+        <br> w, s, a, d to move; c to stop. 
+        <br> hit m to set mouse control, then click to place
+        <br>
+        <br> the red circle repels the bots
+        <br> up, down, left, right to move; space to stop.
+        <br> hit n to set mouse control, then click to place
+        <br>
+        
+        <br> g to turn gravity on and t to turn it off
+        <br> f to turn frictison on and r to turn it off
+        <br> y to turn tracing on and u to turn it off</p>
+  </div>  
+    <div class="canvas_holder ">
+      <canvas id="scootchBotsCanvas" width="4000" height="2000">
+    </div>
+    <div class="footer">
+      <p> contact info </p>
+      <p> Github </p>
+      <p> awesome shit </p>
+    </div>
+  
+
+    
+  <!-- </div> -->
+<!-- </div> -->
+
+
+
+   <script>     
+        var canvas = document.getElementById('scootchBotsCanvas');
+        var context = canvas.getContext('2d');
+      
+
+    </script>
+    <script type="text/javascript" src="scootch-bots/bots.js"></script>
+    <script type="text/javascript" src="scootch-bots/botMove.js"></script>
+    <script type="text/javascript" src="scootch-bots/player.js"></script>
+    <script type="text/javascript" src="scootch-bots/mousey.js"></script>
+    <script type="text/javascript" src="scootch-bots/main_sequence.js"></script>
+</body>
+</html>
