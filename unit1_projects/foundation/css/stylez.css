@@ -47,15 +47,16 @@ body {
 .gmork {
 	height: 100%;
 	width: 100%;
-	opacity: .5;
+	opacity: .3;
 	background-image:url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTh8OcPMu9vpv9Ldr3a22bL1Mfi7TAF4X2navCZN-iKoDKABJlKCVpPGZMv");
 	background-size: 100% 130%;
 	background-color:#cccccc;
 	color: rgba(200, 100, 0, 1 );
-	-webkit-transition-duration: 2s;
-	
+	-webkit-transition-duration: 1s;
+	z-index: 10;
 }
 .gmork:hover {
+	
 	opacity: .9;
 	
 }
@@ -93,3 +94,13 @@ body {
 	width: 100%;
 	opacity: 1;
 }
+
+.something {
+
+	color: yellow;
+}
+
+.something:hover {
+	color: red;
+}
+
