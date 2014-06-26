@@ -16,10 +16,11 @@
       var change = false;
       var gravity = false;
       var friction = false;
-      var scaryList = [];
+      var scaryList = []
+      ;
       var trail = false;
-      pC.rate = [40, 0];
-      pC2.rate = [-20, 0];
+      pC.rate = [30, 0];
+      pC2.rate = [-30, 0];
       
       setInterval(function(){   
 

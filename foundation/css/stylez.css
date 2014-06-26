@@ -16,11 +16,12 @@ body {
 .footer {
 	border: solid 1px white;
 	position: fixed;
-	bottom: 50px;
+	bottom: 0px;
 	right: 20px;
 	text-align: center;
 	color: rgba(200, 100, 20, .99 );
 	width: 90%;
+	height: 5%;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -33,7 +34,7 @@ body {
 	top: 100px;
 	right: 50px;
 	width: 90%;
-	height: 80%;
+	height: 70%;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -44,11 +45,11 @@ body {
 	color: green;
 }
 .gmork {
-	height: 800%;
+	height: 100%;
 	width: 100%;
-	opacity: .5;
+	opacity: .3;
 	background-image:url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTh8OcPMu9vpv9Ldr3a22bL1Mfi7TAF4X2navCZN-iKoDKABJlKCVpPGZMv");
-	background-size: 100% 13%;
+	background-size: 100% 130%;
 	background-color:#cccccc;
 	color: rgba(200, 100, 0, 1 );
 	-webkit-transition-duration: 2s;
@@ -65,12 +66,13 @@ body {
 	width: 30%;
 	overflow: scroll;
 }
-.sidebar:hover {
+
+/*.sidebar:hover {
 	
 	color: red;
 	opacity: .1;
 }
-
+*/
 
 .canvas_holder {
 	position: fixed;

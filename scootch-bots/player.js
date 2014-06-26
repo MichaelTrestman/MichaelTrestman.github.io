@@ -1,8 +1,6 @@
  
 var colorS = [ '#143333', '#5C0000', 'CCCC00', 'B24700', 'brown', 'purple', 'pink']
     
-
-
 var pC = {
   pos: [ (canvas.width / 2), (canvas.height / 2)],
   color: '#FF0000',
