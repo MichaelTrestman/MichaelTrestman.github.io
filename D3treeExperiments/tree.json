@@ -1,0 +1,42 @@
+// {'name': '',
+// 'children': []}
+
+
+{'name': 'mammals',
+'children': [
+
+
+	{'name': 'carnivora',
+	'children': [
+
+		{'name': 'canids',
+		'children': [
+
+			{'name': 'dogs',
+			'children': []},
+
+			{'name': 'foxes',
+			'children': []}
+
+		]},
+
+		{'name': 'pinnipeds',
+		'children': []}
+
+
+	]},
+
+	{'name': 'cetaceans',
+	'children': []},
+
+	{'name': 'primates',
+	'children': [
+
+		{'name': 'humans',
+		'children': []}
+
+	]}
+
+
+
+]}

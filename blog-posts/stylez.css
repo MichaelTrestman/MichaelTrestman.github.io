@@ -1,0 +1,14 @@
+* {
+	font-family: 'Maven Pro', sans-serif;
+}
+body {
+	background-image: url("http://eofdreams.com/photo/sea/02/");
+	background-color: black;
+}
+
+header {
+	background-image: url("http://www.google.com/imgres?imgurl=http%3A%2F%2Feofdreams.com%2Fdata_images%2Fdreams%2Fsea%2Fsea-08.jpg&imgrefurl=http%3A%2F%2Feofdreams.com%2Fsea.html&h=1080&w=1920&tbnid=gXN73qi-RPQX5M%3A&zoom=1&docid=M2VReHUl4Q73NM&ei=JaytU9bXCInzoASXy4DgDQ&tbm=isch&ved=0CDEQMygBMAE&iact=rc&uact=3&dur=1160&page=1&start=0&ndsp=8");
+	color: rgba(210, 140, 0, 1);
+	text-align: center;
+
+}
