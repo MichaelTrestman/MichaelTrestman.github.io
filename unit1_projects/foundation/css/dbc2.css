@@ -1,0 +1,106 @@
+body {
+	/*position: absolute;*/
+	height: 800px;
+	width: 1000px;
+	background-image: url("http://www.massingenuity.com/wp-content/uploads/2012/08/Aligning-Stars.jpg");
+	background-size: 100% 150%;
+}
+.header{
+	/*border: solid 1px white;*/
+	position: fixed;
+	text-align: center;
+	color: rgba(200, 100, 20, .99 );
+	width: 100%;
+
+}
+.footer {
+	border: solid 1px white;
+	position: fixed;
+	bottom: 0px;
+	right: 20px;
+	text-align: center;
+	color: rgba(200, 100, 20, .99 );
+	width: 90%;
+	height: 5%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.header:hover{
+	color: blue;
+}
+.stuff {
+	position: fixed;
+	top: 100px;
+	right: 50px;
+	width: 90%;
+	height: 80%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	/*z-index: 10;*/
+
+}
+.stuff a {
+	color: green;
+}
+.gmork {
+	height: 100%;
+	width: 100%;
+	opacity: .3;
+	background-image:url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTh8OcPMu9vpv9Ldr3a22bL1Mfi7TAF4X2navCZN-iKoDKABJlKCVpPGZMv");
+	background-size: 100% 130%;
+	background-color:#cccccc;
+	color: rgba(200, 100, 0, 1 );
+	-webkit-transition-duration: 1s;
+	z-index: 10;
+}
+.gmork:hover {
+	
+	opacity: .3;
+	
+}
+.sidebar {
+	/*background: black;*/
+	border: solid 1px white;
+	color: white;
+	width: 30%;
+	overflow: scroll;
+	z-index: 10;
+}
+
+/*.sidebar:hover {
+	
+	color: red;
+	opacity: .1;
+}
+*/
+
+.canvas_holder {
+
+	position: fixed;
+	top: 100px;
+	right: 50px;
+	opacity: 1;
+	height: 100%;
+	width: 100%;
+	/*background-image:url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTh8OcPMu9vpv9Ldr3a22bL1Mfi7TAF4X2navCZN-iKoDKABJlKCVpPGZMv");*/
+	background-size: 100% 100%;
+	/*background-color:#000;*/
+}
+#scootchBotsCanvas {
+	/*z-index: 10;*/
+	height: 90%;
+	width: 100%;
+	opacity: 1;
+}
+
+.something {
+
+	color: yellow;
+}
+
+.something:hover {
+	color: red;
+}
+
