@@ -1,0 +1,52 @@
+html {
+	width: 100%;
+	height: 100%;
+}
+body {
+	font-family: 'Rock Salt', cursive;
+  /*font-family: 'Quicksand', sans-serif;*/
+	width: 100%;
+	height: 100%;
+	background-image: url(unit1_projects/images/mandelbrot2.png);
+	/*background-size: 200%;*/
+}
+header {
+	color: rgb(50, 20, 100);
+	font-size: 3em;
+	background-color: rgba(0, 0, 0, .8);
+	margin: 2%;
+	padding: 8%;
+	opacity: 1;
+	text-align: center;
+}
+header h1{
+	background: black;
+}
+.links ul{
+	text-align: center;
+
+	background-color: rgba(0, 0, 0, .8);
+	/*height: %;
+	width: 100%;*/
+	margin: 5%;
+	opacity: 1;
+	display: flex;
+	flex-direction: column;
+	
+	color: white;
+	display: flex;
+
+}
+.links ul li a {
+	background: #666;
+	display: block;
+	margin: 2%;
+	padding: 2%;
+	color: rgb(50, 20, 100);
+	text-decoration: none
+
+}
+.wrapper {
+
+
+}

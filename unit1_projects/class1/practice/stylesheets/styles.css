@@ -1,0 +1,255 @@
+/* General Styles */
+body {
+  background-color: rgb(241, 241, 241);
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.2em;
+  margin: 0px auto;
+  /*min-width: 960px;*/
+  width: 100%;
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  margin: 1em;
+}
+
+a {
+  color: #1D766F;
+  text-decoration: none;
+}
+a:hover {
+  color: #fa2;
+}
+
+h1 {
+  font-size: 2.2em;
+  float: left;
+  line-height: 1em;
+  font-family: 'Rock Salt', cursive;
+}
+
+h2 {
+  background-color: rgb(60, 60, 60);
+
+  color: #FFF;
+  font-size: 2.4em;
+  font-weight: 400;
+  line-height: 2em;
+  margin: 0 0 0.5em 0;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.4em;
+  font-weight: 700;
+  margin: 0 0 0.3em 0;
+  text-align: center;
+}
+
+h4 {
+  color: rgb(120, 120, 120);
+  font-size: 1em;
+  text-align: center;
+}
+
+/* Navigation */
+.nav li {
+  float: left;
+}
+.nav li a {
+  color: #fff;
+  margin: 0 10px;
+  padding: 1em 1em;
+  text-decoration: none;
+}
+
+.jump {
+  color: #565656;
+  font-size: 70px;
+  line-height: 80px;
+  /*position: absolute;*/
+  text-decoration: none;
+  top: 0;
+}
+.jump.up {
+  left: 15px;
+}
+.jump.down {
+  right: 15px;
+}
+
+
+/* Header */
+#header {
+  background-color: #009D92;
+  padding: 1em;
+  /*padding-top: 1.5em;*/
+  margin: 0;
+  /*display: flex;*/
+}
+#header h1 {
+  color: #FFEECC;
+  background: url('../images/icons/it.png') no-repeat 0 50%;
+  /*padding-left: 1em;
+  padding-top: .5em;*/
+  padding: .2em 1em;
+}
+#header .nav {
+  float: right;
+  font-size: 1.2em;
+  margin-left: 1em;
+   padding: .2em 1em;
+}
+#header .nav li {
+  line-height: 1em;
+  padding-top: 1.2em;
+}
+
+#header:after {
+  /* clearfix hack */
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* Main */
+#main {
+  display: flex;
+  flex-direction: column;
+}
+#main div {
+  margin-bottom: 1em;
+  /*position: relative;*/
+}
+#main div.wrapper{
+    width: 100%;
+    /*max-width:1400px;*/
+    height: 100%;
+    margin: 0 auto;
+}
+
+#main section:after {
+  /* clearfix hack */
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* Famous Women */
+#famous {
+  height: 100%;
+}
+
+.metawrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.wrapper {
+  border: solid 2px black;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  /*justify-content: space-between;*/
+ 
+}
+
+
+#famous div.woman {
+
+  background-color: #440;
+  /*float: left;*/
+  min-height: 250px;
+  margin: 1%;
+  padding: 2%;
+  width: 27.33%;
+  height: 100%;
+  /*max-height: 250px;*/
+  overflow: scroll;
+  -webkit-transition-duration: 1s;
+}
+/*#famous div.woman p {
+  display: none;*/
+/*#famous div.woman:hover p {
+  display: inline;
+  /*-webkit-transition-duration: 1s;*/
+}*/
+
+}
+#famous div.break {
+  clear: both;
+}
+
+#famous div img {
+  display: block;
+  margin: 1em auto;
+  width: 100%;
+}
+
+
+/* Organizations */
+#organizations {
+  clear: both;
+}
+
+#organizations ul {
+  /*margin: 50px;*/
+  /*position: relative;*/
+}
+#organizations ul li {
+  font-size: 1.2em;
+  line-height: 1.3em;
+  margin-bottom: 1em;
+  padding-left: .5em;
+  max-width: 50%;
+}
+#organizations img {
+  /*position: absolute;*/
+  right: 5%;
+  top: 0;
+  display: none;
+  max-width: 40%;
+}
+#organizations li:hover img {
+  display: block;
+}
+
+/* Fun Facts */
+#facts ul {
+  margin: 2%;
+}
+#facts ul li {
+  font-size: 1.2em;
+  line-height: 1.3em;
+  margin-bottom: 1em;
+  padding: .5%;
+}
+
+
+
+/* Footer */
+#footer {
+  background-color: #00665F;
+}
+
+#footer .nav {
+  float: left;
+  font-size: 1.1em;
+  margin: 1%;
+  display: flex;
+  /*flex-align: column;*/
+}
+
+#footer:after {
+  /* clearfix hack */
+  content: "";
+  display: table;
+  clear: both;
+}
