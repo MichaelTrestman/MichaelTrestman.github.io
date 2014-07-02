@@ -18,6 +18,7 @@ header {
 	margin: 2%;
 	padding: 8%;
 	opacity: 1;
+	border-radius: 15%;
 	/*text-align: center;*/
 }
 header h1{
@@ -94,6 +95,11 @@ header h2 {
 	.links ul {
 		flex-direction: row;
 		justify-content: space-around;
+	}
+}
+@media (max-height: 579px) and (max-width: 400px){
+	h2 {
+		display: none;
 	}
 }
 
