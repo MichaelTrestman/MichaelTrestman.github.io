@@ -11,18 +11,39 @@ body {
 	/*background-size: 200%;*/
 }
 header {
-	color: rgb(50, 20, 100);
+	color: rgb(295, 212, 0);
+	color: white;
 	font-size: 3em;
 	background-color: rgba(0, 0, 0, .8);
 	margin: 2%;
 	padding: 8%;
 	opacity: 1;
-	text-align: center;
+	/*text-align: center;*/
 }
 header h1{
-	background: black;
+	display: inline-block;
+	width: 90%;
+	height: 100%;
+	text-align: center;
+	vertical-align: top;
+	padding-bottom: 5%;
+	margin: -5px;
+	/*background: black;*/
+	clear: none;
+	/*float: left;*/
+}
+header h2 {
+	width: 60%;
+	font-size: .5em;
+	/*float: left;*/
+	float: right;
+	margin: -5px;
+	/*text-align: right;*/
+	color: white;
+	clear: none;
 }
 .links ul{
+	border-radius: 15%;
 	text-align: center;
 
 	background-color: rgba(0, 0, 0, .8);
@@ -32,21 +53,47 @@ header h1{
 	opacity: 1;
 	display: flex;
 	flex-direction: column;
-	
+	justify-content: space-between;
 	color: white;
 	display: flex;
 
 }
+.links li a:hover{
+	background-color: gold;
+	color: black;
+}
 .links ul li a {
+	border-radius: 45%;
 	background: #666;
 	display: block;
 	margin: 2%;
 	padding: 2%;
-	color: rgb(50, 20, 100);
-	text-decoration: none
+	color: white;
+	text-decoration: none;
+	margin: auto;
 
 }
 .wrapper {
-
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 
 }
+
+@media (max-width: 580px){
+	header h2 {
+		width: 100%;
+		float: right;
+		text-align: right;
+		font-size: .35em;
+	}
+	
+}
+@media (min-width: 590px){
+	.links ul {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+
+
