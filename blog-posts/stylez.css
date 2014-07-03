@@ -2,14 +2,19 @@
 	font-family: 'Josefin Sans', sans-serif;
 }
 body {
-	background-image: url('http://eztechtraining.com/wp-content/uploads/2012/11/2012-10-20-21.38.35.jpg');
-	background-color: black;
+
+	/*background-image: url('../unit1_projects/images/NatGeo06.jpg');*/
+	background-color: rgba(66, 77, 88, .5);
 	font-weight: 900;
+	background-size: 33%;
+}
+body.week2{
+	background-image: url('../unit1_projects/images/NatGeo06.jpg');
 }
 
 header {
 	background-image: url("http://www.google.com/imgres?imgurl=http%3A%2F%2Feofdreams.com%2Fdata_images%2Fdreams%2Fsea%2Fsea-08.jpg&imgrefurl=http%3A%2F%2Feofdreams.com%2Fsea.html&h=1080&w=1920&tbnid=gXN73qi-RPQX5M%3A&zoom=1&docid=M2VReHUl4Q73NM&ei=JaytU9bXCInzoASXy4DgDQ&tbm=isch&ved=0CDEQMygBMAE&iact=rc&uact=3&dur=1160&page=1&start=0&ndsp=8");
-	/*background-color: rgba(50, 0, 100, .5);*/
+	background-color: rgba(50, 0, 100, .5);
 	color: white;
 	text-align: right;
 
@@ -18,19 +23,24 @@ header {
 	font-size: 2em;
 }
 .intro {
+	margin: -5% 0;
+	margin-bottom: -10%;
 	font-size: 4em;
 	color: white;
+	background-color: rgba(50, 50, 100, .5);
 }
 .post {
+	/*float: left;*/
 	text-align: justify;
-	border: solid 2px;
-	margin: 5%;
+	/*border: solid 2px;*/
+	margin: 0%;
 	padding: 5%;
 	font-size:2em;
 	
 }
 h2 {background-color: rgba(20, 20, 20, .5);
 	color: white;
+	text-align: right
 
 }
 .q {
@@ -42,5 +52,30 @@ h2 {background-color: rgba(20, 20, 20, .5);
 .a {
 	background-color: rgba(20, 20, 20, .5);
 	color: white;
+	
+
+}
+.box-wrapper {
+	text-align: center;
+	/*display: flex;
+	flex-direction: column;
+	justify-content: space-around;*/
+	background: black;
+	color: white;
+	height: 50%;
+	width: 50%;
+	margin: 0px;
+	display: block;
+	float: left;
+	clear: both;
+}
+.box {
+	/*float: left;*/
+	background-color: purple;
+	color: white;
+	border: solid 2px white;
+	margin: 15%;
+	padding: 5%;
+	margin-top: 25%;
 
 }
