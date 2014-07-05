@@ -61,24 +61,24 @@ h4 {
 }
 .nav li a {
   color: #fff;
-  margin: 0 10px;
+  margin: 0 1%;
   padding: 1em 1em;
   text-decoration: none;
 }
 
 .jump {
   color: #565656;
-  font-size: 70px;
-  line-height: 80px;
+  font-size: 7%;
+  line-height: 8%;
   /*position: absolute;*/
   text-decoration: none;
   top: 0;
 }
 .jump.up {
-  left: 15px;
+  left: 1.5%;
 }
 .jump.down {
-  right: 15px;
+  right: 1.5%;
 }
 
 
@@ -146,26 +146,27 @@ h4 {
 }
 
 .metawrapper {
-  display: flex;
+  /*display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-between;*/
   height: 100%;
 }
 
 .wrapper {
   border: solid 2px black;
   height: 100%;
-  display: flex;
-  flex-direction: row;
+  /*display: flex;
+  flex-direction: row;*/
   /*justify-content: space-between;*/
- 
+ float: left;
+ clear: none;
 }
 
 
 #famous div.woman {
 
   background-color: #440;
-  /*float: left;*/
+  float: left;
   min-height: 250px;
   margin: 1%;
   padding: 2%;
@@ -228,8 +229,9 @@ h4 {
 #facts ul li {
   font-size: 1.2em;
   line-height: 1.3em;
-  margin-bottom: 1em;
+  
   padding: .5%;
+  margin-bottom: 1em;
 }
 
 
@@ -237,19 +239,27 @@ h4 {
 /* Footer */
 #footer {
   background-color: #00665F;
+  height: 10%;
+  width: 100%;
+  z-index: 10;
 }
 
 #footer .nav {
   float: left;
   font-size: 1.1em;
   margin: 1%;
-  display: flex;
+  height: 100%;
+  width: 100%;
+  /*display: flex;*/
   /*flex-align: column;*/
 }
-
+#footer .nav ul li a{
+  color: red;
+  float: left;
+}
 #footer:after {
   /* clearfix hack */
-  content: "";
+  /*content: "";
   display: table;
-  clear: both;
+  clear: both;*/
 }

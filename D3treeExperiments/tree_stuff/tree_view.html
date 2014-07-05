@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> little tree generator </title>
+		<link rel="stylesheet" type="text/css" href="../../reset.css">
+		<link href='http://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="tree_view.css">
+	<script src="../d3.v3.js" charset="utf-8"></script>
+
+	<script src="../treeData.js"></script>
+	<script src="../tree.js"></script>
+	<script src="../packing.js"></script>
+
+</head>
+
+<body>
+	<div class="container">	
+		<header>
+			<h1> Phylogeny of the Amniotes</h1>
+			<h4> click on a bubble to zoom in; click on the outermost bubble to zoom out (sometimes it hangs, you may have to reset; work in progress!)</h4>
+		</header>
+		
+		<div class="sideBar">
+			<h1>SideBar</h1>
+			<p class="info">info</p>
+			<img src="http://xinglida.net/images/Menglongipus/deinonychus_pack.jpg">
+			<h2 class="orange"> publications</h2>
+			<ul class="orange">
+				<li>publication 1</li>
+				<li>publication 2</li>
+				<li>publication 3</li>
+			</ul>
+		</div>
+
+		<div class="wrapper">
+		</div>
+		
+
+		<div class="nav">
+
+			<h1>nav</h1>
+			<ul>
+				<li>place1</li>
+				<li>place2</li>
+				<li>place3</li>
+			</ul>
+			<span class="orange">
+			<h1>display options</h1>
+			<ul>
+				<li>option1</li>
+				<li>option2</li>
+				<li>option3</li>
+			</ul>
+			</span>
+
+		</div>
+
+		<footer>
+		</footer>
+	</div>
+<!-- 
+	<script src="littleTree.js"></script>
+ -->
+
+
+<script>
+
+// var littleTree = littleTree (treeData, 9);
+
+// makePackingViz(littleTree);
+
+makePackingViz(treeData);
+
+</script>
+
+<script>
+
+
+	// node.on("click", function(d){
+
+	// 	// littleTree = littleTree
+	// 	makePackingViz( d);
+		
+	// })
+	
+	//makePackingViz( littleTree );
+
+
+</script>
+
+
+</body>
+
+</html>

@@ -87,7 +87,7 @@ d3.selectAll('circle')
     .style("font-size", "3em")
     .text("a simple tooltip");
 
-  var sidebar = d3.selectAll(".sideBar");
+  var sidebar = d3.selectAll(".info");
     
 
     node

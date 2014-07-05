@@ -1,0 +1,86 @@
+html,
+body,
+.container {
+	width: 100%;
+	height: 100%;
+	font-family: 'Libre Baskerville', serif;
+}
+
+header{
+	background-color: rgba(65, 65, 05, .99);
+	color: white;
+	text-align: center;
+	height: 15%;
+}
+h1 {
+	font-size: 3em;
+}
+header h4 {
+	margin: 1%;
+	padding: 1%;
+}
+.wrapper {
+	float: right;
+	width: 60%;
+	height: 85%;
+}
+.orange {
+	color: orange;
+}
+svg {
+	float: right;
+	/*margin: auto;*/
+	/*margin-left: 100px;*/
+	width: 100%;
+	/*min-height: 222px;*/
+	background-color: rgb(258, 240, 215);
+}
+.sideBar,
+.nav {
+	height: 85%;
+	width: 20%;
+	text-align: center;
+
+
+}
+
+ul li {
+	/*display: block;*/
+	/*background: rgb(99, 15, 0);*/
+	margin: 8% 0px;
+	border-radius: 25%;
+	text-align: center;
+	font-size: 1em;
+	-webkit-transition-duration: .4s;
+
+}
+.nav ul li:hover {
+	font-size: 1.5em;
+	color: green;
+}
+
+.nav h1 {
+	margin: 18% 0px;
+}
+
+.nav, .sideBar {
+	background-color: rgb(15, 58, 49);
+}
+.sideBar {
+	
+	float: right;
+	background-color: rgb(15, 58, 49);
+	color: white;
+}
+.sideBar h2, ul li {
+	margin: 8% 0px;
+}
+.sideBar h2 {
+	font-size: 2em;
+}
+.nav {
+	float: right;
+	/*background-color: black;*/
+	color: white;
+	display: block;
+}
