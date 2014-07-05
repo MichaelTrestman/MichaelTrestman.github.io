@@ -110,3 +110,11 @@ li:hover a {
 	color: gold;
 }
 
+@media screen and (max-width: 600px){
+
+	body {
+		height: 120%;
+	}
+
+
+}
