@@ -7,8 +7,9 @@ body {
   /*font-family: 'Quicksand', sans-serif;*/
 	width: 100%;
 	height: 100%;
-	background-image: url(unit1_projects/images/mandelbrot2.png);
+	
 	background-size: 150%;
+	background-image: url(unit1_projects/images/mandelbrot2.png);
 }
 header {
 	color: rgb(295, 212, 0);
