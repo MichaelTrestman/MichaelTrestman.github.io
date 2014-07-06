@@ -4,8 +4,8 @@ var makePackingViz = function(targetTree) {
   currentRoot = targetTree;
 
 
-var width = 666;
-var height = 444;
+var width = 866;
+var height = 644;
 
 d3.selectAll('svg').remove();
 d3.selectAll('text').remove();
@@ -17,7 +17,7 @@ var canvas = d3.select('.wrapper').append('svg').attr("class", "canvas")
 	// .attr('width', width)
 	// .attr('height', height)
 	.append('g')
-		.attr('transform', 'translate(50, 50)');
+		.attr('transform', 'translate(-50, 50)');
 
 
 var pack = d3.layout.pack()
