@@ -4,8 +4,8 @@ var makePackingViz = function(targetTree) {
   currentRoot = targetTree;
 
 
-var width = 700;
-var height = 600;
+var width = 666;
+var height = 444;
 
 d3.selectAll('svg').remove();
 d3.selectAll('text').remove();

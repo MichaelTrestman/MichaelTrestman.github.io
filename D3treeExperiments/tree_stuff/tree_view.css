@@ -38,16 +38,37 @@ svg {
 .sideBar,
 .nav {
 	height: 85%;
-	width: 20%;
 	text-align: center;
-
 
 }
 
-ul li {
-	/*display: block;*/
+.nav {
+	border: solid 1px blue;
+	display: flex;
+	flex-align: column;
+	justify-content: space-between
+}
+.pubs {
+	background-color: rgba(0, 0, 0, .2);
+}
+
+.sideBar {
+	width: 20%
+}
+.nav {
+	width: 20%;
+}
+.tags {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.pubs ul li {
+	display: block;
 	/*background: rgb(99, 15, 0);*/
-	margin: 8% 0px;
+	/*float: left;*/
+	margin: auto;
 	border-radius: 25%;
 	text-align: center;
 	font-size: 1em;
@@ -59,9 +80,9 @@ ul li {
 	color: green;
 }
 
-.nav h1 {
+/*.nav h1 {
 	margin: 18% 0px;
-}
+}*/
 
 .nav, .sideBar {
 	background-color: rgb(15, 58, 49);
@@ -75,11 +96,11 @@ ul li {
 .sideBar h2, ul li {
 	margin: 8% 0px;
 }
-.sideBar h2 {
+h2 {
 	font-size: 2em;
 }
 .nav {
-	float: right;
+	/*float: right;*/
 	/*background-color: black;*/
 	color: white;
 	display: block;
