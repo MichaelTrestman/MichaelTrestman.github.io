@@ -1,7 +1,7 @@
 var width = 600,
 		height = 600,
 
-		canvas = d3.select('body').append('svg')
+		canvas = d3.select('.wrapper').append('svg')
 			.attr('width', width)
 			.attr('height', height);
 
@@ -68,7 +68,7 @@ var link = canvas.selectAll(".link")
 
     								
 
-   	var tooltip = d3.select("body")
+   	var tooltip = d3.select(".wrapper")
     .append("div")
     .style("position", "absolute")
     .style("z-index", "10")

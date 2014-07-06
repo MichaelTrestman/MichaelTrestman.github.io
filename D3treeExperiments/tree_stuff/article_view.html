@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> little tree generator </title>
+		<link rel="stylesheet" type="text/css" href="../../reset.css">
+		<link href='http://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="tree_view.css">
+	<script src="../d3.v3.js" charset="utf-8"></script>
+
+	<script src="../treeData.js"></script>
+	<script src="../tree.js"></script>
+	<script src="../packing.js"></script>
+
+</head>
+
+<body>
+	<div class="container">	
+		<header>
+			<h1> Article view mockup</h1>
+			
+		</header>
+
+		
+		<div class="sideBar">
+			<h1 class="info">Amniotes</h1>
+			
+			<img class="dinopic" src="http://xinglida.net/images/Menglongipus/deinonychus_pack.jpg">
+
+			<div class="pubs">
+				<h2 > bibliographic resources</h2>
+				<ul class="tags">
+					<li>topic1</li>
+					<li>topic2</li>
+					<li>topic3</li>
+				</ul>
+
+				<ul>
+					<li>publication 1</li>
+					<li>publication 2</li>
+					<li>publication 3</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="article">
+			<h3> Lorem ipsum
+			</h3>
+			<p>Piranha requiem shark threadtail Rattail African glass catfish loach. Hog sucker píntano rough scad sea raven titan triggerfish, Pacific lamprey black dragonfish orbicular batfish. Kelp perch bluefish: grunt butterfly ray pupfish; batfish paperbone sweeper yellowmargin triggerfish snipe eel zebra lionfish roach. Northern clingfish staghorn sculpin sand tilefish, snubnose parasitic eel threespine stickleback gibberfish longnose dace. Silver driftfish yellowtail horse mackerel longnose lancetfish deepwater stingray haddock bighead carp tube-snout boxfish yellowfin pike marlin, cuckoo wrasse. New Zealand smelt, trout frilled shark torrent fish; barbel white marlin yellow-eye mullet.
+
+Prickly shark spadefish whale catfish ladyfish. Soldierfish popeye catafula yellowfin tuna Ragfish goldspotted killifish skipping goby mustache triggerfish rockfish dragonfish, flat loach ribbon eel sandfish. Mustache triggerfish Australian prowfish snake eel: lighthousefish chub, Siamese fighting fish, weever hagfish? Flying characin opah sunfish roundhead, crocodile shark triplefin blenny, Rainbowfish clown triggerfish.
+
+Northern anchovy longfin bonytongue yellowfin surgeonfish electric ray sea lamprey whiptail gulper. Tripod fish Black tetra sauger largenose fish slender barracudina yellow jack sea devil lemon shark. Roundhead, emperor bream man-of-war fish manefish sand tilefish Redhorse sucker dwarf gourami.
+
+Ribbonbearer Atlantic cod olive flounder mudfish sardine Siamese fighting fish labyrinth fish gulper. Weeverfish yellowfin pike squaretail bat ray, whale shark blue catfish southern hake tommy ruff. Anemonefish triplefin blenny porbeagle shark livebearer roosterfish pikeblenny cornetfish bullhead flagblenny lookdown catfish ponyfish sleeper Cornish Spaktailed Bream. European flounder Atlantic trout tadpole cod freshwater hatchetfish pike characid harelip sucker Atlantic trout.
+
+Grunion spiderfish jellynose fish four-eyed fish smoothtongue. Dory gurnard sea bream goldeye Colorado squawfish queen danio greeneye bleak elasmobranch spaghetti eel slimy mackerel. Tadpole cod angelfish, tui chub chain pickerel manefish, northern pearleye weever rockweed gunnel spiny basslet yellowtail barracuda oarfish bullhead shark paperbone waryfish: clingfish. Weeverfish Shingle Fish pearlfish duckbill eel ocean perch spotted dogfish powen flabby whalefish cobbler spearfish walking catfish noodlefish trumpetfish cookie-cutter shark. Graveldiver sabertooth barred danio grunt sculpin? Pompano dolphinfish dealfish, surf sardine Cherubfish, chimaera, northern anchovy; zebra danio. California smoothtongue Black scabbardfish bramble shark sand tilefish, Atlantic cod flatfish ribbonfish smooth dogfish. Threadtail turbot golden loach, sand diver oarfish queen danio; tiger shovelnose catfish guitarfish, "Pacific cod kappy fangtooth shrimpfish slimehead yellowbelly tail catfish." Splitfin: catalufa pipefish bandfish amago sixgill shark cutthroat eel ocean perch.</p>
+		</div>
+
+		<div class="wrapper wrapsmall">
+		</div>
+		
+
+		<div class="nav">
+
+			<h2>navigation</h>
+			<ul>
+				<li>place1</li>
+				<li>place2</li>
+				<li>place3</li>
+			</ul>
+			
+			<h2>display options</h2>
+			<ul>
+				<li>option1</li>
+				<li>option2</li>
+				<li>option3</li>
+			</ul>
+			
+			<div class="pubs">
+				<h2 > content </h2>
+				<ul class="tags">
+					<li>articles</li>
+					<li>video</li>
+					<li>other</li>
+				</ul>
+
+				<ul>
+					<li>publication 1</li>
+					<li>publication 2</li>
+					<li>publication 3</li>
+				</ul>
+			</div>
+			<div class="tabs">
+				<ul>
+					<a href="tree_view.html"><li>phylogenetic view</li></a>
+					<a href="article_view.html"><li>article view</li></a>
+				</ul>
+			</div>
+		</div>
+
+		<footer>
+		</footer>
+	</div>
+<!-- 
+	<script src="littleTree.js"></script>
+ -->
+
+
+<script>
+
+// var littleTree = littleTree (treeData, 9);
+
+// makePackingViz(littleTree);
+
+makePackingViz(treeData);
+
+</script>
+
+<script>
+
+
+	// node.on("click", function(d){
+
+	// 	// littleTree = littleTree
+	// 	makePackingViz( d);
+		
+	// })
+	
+	//makePackingViz( littleTree );
+
+
+</script>
+
+
+</body>
+
+</html>

@@ -2,7 +2,7 @@ html,
 body,
 .container {
 	width: 100%;
-	height: 100%;
+	height: 120%;
 	font-family: 'Libre Baskerville', serif;
 }
 
@@ -10,7 +10,7 @@ header{
 	background-color: rgba(65, 65, 05, .99);
 	color: white;
 	text-align: center;
-	height: 15%;
+	height: 10%;
 }
 h1 {
 	font-size: 3em;
@@ -23,6 +23,12 @@ header h4 {
 	float: right;
 	width: 60%;
 	height: 85%;
+}
+.wrapsmall {
+	display: none;
+	float: right;
+	width: 30%;
+	height: 40%;
 }
 .orange {
 	color: orange;
@@ -37,13 +43,15 @@ svg {
 }
 .sideBar,
 .nav {
+	float: left;
 	height: 85%;
 	text-align: center;
+	/*width: 10%;*/
 
 }
 
 .nav {
-	border: solid 1px blue;
+	/*border: solid 1px blue;*/
 	display: flex;
 	flex-align: column;
 	justify-content: space-between
@@ -72,10 +80,15 @@ svg {
 	border-radius: 25%;
 	text-align: center;
 	font-size: 1em;
-	-webkit-transition-duration: .4s;
-
+/*	-webkit-transition-duration: .4s;
+*/
 }
-.nav ul li:hover {
+
+ul li {
+		-webkit-transition-duration: .4s;
+}
+
+ul li:hover {
 	font-size: 1.5em;
 	color: green;
 }
@@ -83,7 +96,16 @@ svg {
 /*.nav h1 {
 	margin: 18% 0px;
 }*/
-
+.article {
+	background-color: rgb(255, 247, 220);
+;
+	display: block;
+	float: right;
+	width: 60%;
+	height: 80%;
+	overflow: scroll;
+	margin: 0px;
+}
 .nav, .sideBar {
 	background-color: rgb(15, 58, 49);
 }
@@ -104,4 +126,13 @@ h2 {
 	/*background-color: black;*/
 	color: white;
 	display: block;
+}
+.dinopic {
+	width: 100%;
+}
+.tabs {
+
+	width: 100%;
+	float: right;
+	background-color: black;
 }
