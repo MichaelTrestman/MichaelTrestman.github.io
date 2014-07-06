@@ -47,12 +47,13 @@ h2 {background-color: rgba(20, 20, 20, .5);
 
 }
 .q {
-	/*display: block;*/
+	display: block;
 	background-color: rgba(999, 999, 999, .9);
 	color: black;
 }
 
 .a {
+	display: block;
 	background-color: rgba(20, 20, 20, .9);
 	color: white;
 	
