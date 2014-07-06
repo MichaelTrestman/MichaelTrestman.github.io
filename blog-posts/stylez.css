@@ -34,7 +34,7 @@ header {
 }
 .post {
 	/*float: left;*/
-	text-align: justify;
+	text-align: left;
 	/*border: solid 2px;*/
 	margin: 0%;
 	padding: 5%;
