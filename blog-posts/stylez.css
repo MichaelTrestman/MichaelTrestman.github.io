@@ -9,7 +9,7 @@ body {
 	background-size: 33%;
 }
 body.week2{
-	background-image: url('../unit1_projects/images/NatGeo06.jpg');
+	background-image: url('../unit1_projects/images/NatGeo10.jpg');
 }
 body.week1{
 	background-image: url('../unit1_projects/images/NatGeo06.jpg');
@@ -26,9 +26,10 @@ header {
 	font-size: 2em;
 }
 .intro {
-	margin: -5% 0;
+	width: 80%;
+	margin: -5% auto;
 	margin-bottom: -10%;
-	font-size: 4em;
+	font-size: 2.6em;
 	color: white;
 	background-color: rgba(50, 50, 100, .5);
 }
@@ -38,7 +39,7 @@ header {
 	/*border: solid 2px;*/
 	margin: 0%;
 	padding: 5%;
-	font-size:2em;
+	font-size:1.6em;
 	
 }
 h2 {background-color: rgba(20, 20, 20, .5);
