@@ -121,14 +121,14 @@ li:hover a {
 	header, footer {
 		float: left;
 		clear: none;
-		height: 15%;
+		/*height: 15%;*/
 	}
 
 }
 
 @media screen and (max-height: 400px){
-	body {
-		height:120%;
+	body, .wrapper {
+		height:150%;
 	}
 	header, footer {
 		float: left;
