@@ -3,17 +3,20 @@
 }
 body {
 
-	/*background-image: url('../unit1_projects/images/NatGeo06.jpg');*/
+	background-image: url('../unit1_projects/images/NatGeo06.jpg');
 	background-color: rgba(66, 77, 88, .5);
 	font-weight: 900;
-	background-size: 33%;
+	background-size:100%;
 }
 body.week2{
 	background-image: url('../unit1_projects/images/NatGeo10.jpg');
+	background-size:100%;
 }
 body.week1{
 	background-image: url('../unit1_projects/images/NatGeo06.jpg');
+	background-size:100%;	
 }
+
 
 header {
 	background-image: url("http://www.google.com/imgres?imgurl=http%3A%2F%2Feofdreams.com%2Fdata_images%2Fdreams%2Fsea%2Fsea-08.jpg&imgrefurl=http%3A%2F%2Feofdreams.com%2Fsea.html&h=1080&w=1920&tbnid=gXN73qi-RPQX5M%3A&zoom=1&docid=M2VReHUl4Q73NM&ei=JaytU9bXCInzoASXy4DgDQ&tbm=isch&ved=0CDEQMygBMAE&iact=rc&uact=3&dur=1160&page=1&start=0&ndsp=8");
@@ -46,6 +49,10 @@ h2 {background-color: rgba(20, 20, 20, .5);
 	color: white;
 	text-align: right
 
+}
+.q, 
+.a {
+		padding: 3%;
 }
 .q {
 	display: block;
