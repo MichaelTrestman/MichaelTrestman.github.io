@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Michael Trestman's Dev Bootcamp Week 2 technical blog post</title>
+    <!-- <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href='http://fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+    <link href="stylez.css" rel="stylesheet">
+  </head>
+  <body class="week1">
+
+  <div class="container">
+    <header class="row">
+      <h1>Michael Trestman's Dev Bootcamp Week 3 technical blog post</h1>
+    </header>
+
+
+    <div class="intro">
+      <p><span class="first-letter">J</span> <span class="first-letter">avascript: what is the deal with Javascript?</span> </p>
+    </div>
+
+    <div class="post">
+        <span class="q">Why is javascript so popular with developers?<br>
+      </span>
+
+      <span class="a">
+        Every browser is a javascript interpreter. Javascript givens dynamic behavior to the CSS-styled html document rendered by the browser. This allows a website to provide an interactive user experience.
+      </span>
+  	</div>
+    <div class="post">
+        <span class="q">What are the great things about JavaScript?<br>
+      </span>
+
+      <span class="a">
+        Well, according to <a href="http://www.quora.com/Computer-Programming/Why-is-JavaScript-so-popular">literally just some random post</a> I found on quora.com, by Dhishna Chandnani:
+        <ul>
+          <li>It's pretty easy to learn. Trust me, it is. And this comes from a girl who did not want to learn web development but ended up learning Javascript simply because I thought I could do it in a couple of days. ;)
+          <br>P. S. It did obviously take more days, and  a lot of practice. Nevertheless, I found it easier to learn in comparison to others. This could also be because I am good with C.</li>
+        <li>Libraries! Javascript has libraries for everything. Literally. You can build a complete mobile website in a day using jQuery mobile. </li>
+        <li>Speed: Javascript is fast. And client side. Reduces load on server.</li>
+        <li>Javascript can also be used to provide offline functionality. Check out Google Gear for more.</li> 
+        <li>JSON started with Javascript! So did XML!</li>
+        <li>Ajax: Every web developer knows and loves Ajax. No point to be made on this</li></ul>
+      
+        <br>
+        So those all seem like great answers, but the obvious thing the author left out is node.js, which is the powerful, sexy javascript-based server-side framework that I hear all the cool kids are using (sigh). I guess ruby on rails is pretty cool too though.
+        <a href="http://www.youtube.com/watch?v=HloPATn9XKk">This video</a> is kind of hard to watch but was something google gave me when I asked "node vs ruby".<br>
+
+
+      </span>
+    </div>
+    <div class="post">
+        <span class="q">What are some of Javascript's limitations?<br>
+      </span>
+
+      <span class="a">
+        When javascript runs in the browser it is 'sandboxed'--it can't access the files on your computer. This constraint is for security reasons. If, when you visited a website, the script they gave your browser to run could read or write data on your computer, it would be super easy for hackers to steal all your shit or totally take over your computer.<br>This isn't really a <emph>limitation</emph> of javascript however, although this is a common misconception. It's not even a feature of javscript per se, it's a feature of the browser as interpreter; and it's not a flaw, it's a design feature.<br> But javascript can run outside of the browser. One case is if hackers find a way to trick the browser into letting the javascript out of the security 'sandbox'--then allowing it run. This is known as a cross-site scripting (XSS) attack.
+        <br>
+        Another example of javascript outside the browser is node.js, which, well really i don't know what it does... framework stuff? but you can also just run scripts from the command line, analogously to using irb to run ruby code.<br> In node, many of the objects that are present in the javascript environment of the browser are not there, for example 'window' and 'document' are undefined.
+
+
+
+
+      </span>
+    </div>
+
+  </div></body>
+</html>
