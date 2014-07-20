@@ -1,6 +1,10 @@
 * {
 	font-family: 'Josefin Sans', sans-serif;
 }
+img {
+	margin-left: 20%
+	
+}
 body {
 
 	background-image: url('../unit1_projects/images/NatGeo06.jpg');

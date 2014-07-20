@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Michael Trestman's Dev Bootcamp Week 4 technical blog post</title>
+    <!-- <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href='http://fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+    <link href="stylez.css" rel="stylesheet">
+  </head>
+  <body class="week1">
+
+  <div class="container">
+    <header class="row">
+      <h1>Michael Trestman's Dev Bootcamp Week 4 technical blog post</h1>
+    </header>
+
+
+    <div class="intro">
+      <p><span class="first-letter">R</span> <span class="first-letter">uby stuff</span> </p>
+    </div>
+
+    <div class="post">
+        <span class="q">Ruby's Enumerable#map<br>
+      </span>
+
+      <span class="a">
+        this is a shnazzy little method that 'maps' an input array onto an output array. it can be a sleeker alternative to each, and has all of the same power. that's because 'maps' takes a block as a parameter. calling map on an array returns an array of the results of calling the specified block on the items in the original.<br>
+        say you have an array of hashes containing info about your favorite bands, and you want an array of the years their best albums came out. You could do like<br>
+        <br>
+
+        years_of_best_album = favorite_bands.map{|band| band.best_album.release_date.year}<br>
+        <br>
+        at least if, for each band, you've defined a best_album property with a release_date property which is a time object (or otherwise has a 'year' property). yup<br>
+
+
+      </span>
+  	</div>
+
+  </div></body>
+</html>
