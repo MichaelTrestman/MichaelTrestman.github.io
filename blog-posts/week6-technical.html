@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Michael Trestman's Dev Bootcamp Week 6 technical blog post</title>
+    <!-- <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href='http://fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+    <link href="stylez.css" rel="stylesheet">
+  </head>
+  <body class="week1">
+
+  <div class="container">
+    <header class="row">
+      <h1>Michael Trestman's Dev Bootcamp Week 6 technical blog post</h1>
+    </header>
+
+
+    <div class="intro">
+      <p><span class="first-letter">O</span> <span class="first-letter">bject-oriented Ruby: Blocks, Procs and Lambdas</span> </p>
+    </div>
+
+    <div class="post">
+        <span class="q">I used Javascript a little bit before switching to Ruby, so I'm still thinking of Ruby stuff in terms of comparison to JS, so i'll just roll with that.<br>
+      </span>
+
+      <span class="a">
+        <span class="first-letter">R</span>uby methods seemed REALLY weird to me because, unlike javascript functions they are totally screened off from the rest of the world (i.e. the code that is running in the background. If you declare that x = 5, then run a method and try to call up the value of x, no dice. In javascript, that works just fine--functions can access variable assignments in the global scope, unless they get 'shadowed' by a function-scope assignment of the same variable.
+        This seemed weird and nerfy to me about Ruby methods, although i suppose it has its benefits. And anyway, it doesn't matter much, since you can use procs to do the same thing. Procs, unlike methods are NOT screened off from the 'ambient code environment', and can operate on variable assigments declared outside the proc itself. awesome. although confusing--since now you have to remember the distinction, unlike in JS.
+        This also sort of explains a property of procs that can be confusing, which is what happens when you hit return inside a proc. It doesn't just return from the proc, it returns from whatever method is last in the call stack--the proc itself is ignored in this respect, since its not a method, just a chunk of code. Confusing? perhaps. just remember it. and if you don't like it, use a lambda...
+      </span>
+  	</div>
+    <div class="post">
+        <span class="q">Blocks on the other hand, are just chunks of code, that you can refer to directly with certain methods, although they cannot be referred to by name, since they don't have names. so they are much like js anonymous functions, or ruby procs that don't have names--although you can quikly convert a block to a named proc. when you call each, the thing that happens 'each' time, for example, is a block. similarly, in an IF call, the consequent (what happens IF the condition is fulfilled, or for that matter, what happens ELSE it isn't), is a block.
+      </span>
+      <span class"a">
+        Lambdas are pretty much like procs but with a couple of differences. First, return inside a lambda just returns from the lambda itself--it doesn't move up the call stack. I remember this because 'lambda' includes 'lamb', an animal which is notoriously non-aggressive--the little 'lamb'da is too cute and harmless to upset the callstack, so return just returns out of it.
+
+        Also, lambdas are pickier than procs about the arguments that are passed in. lambdas will spazz out if the wrong argument-set is passed in, whereas procs pretty much don't give a shit. they are kind of like the honey-badgers of closures in that respect.
+        Also, lambdas are awesome just because the <a href="http://half-life.wikia.com/wiki/Lambda_logo">lambda</a> is the symbol of the terran resistence against the Combine, and if you see it painted on a wall, there may well be some cross-bow bolts or health packs nearby. booya.<img src="http://fc02.deviantart.net/fs71/i/2011/054/f/c/lambda_locator_id_by_portalblinx-d3a8bgk.jpg"></img>
+
+      </span>
+
+    </div>
+
+
+  </div></body>
+</html>
