@@ -46,16 +46,16 @@
   <div class='container'>
     <div class='row panel'>
       <div id='sidebar' class='sidebar'>
-        <p>
-          click to highlight or unhighlight traits
-        </p>
-        <ul id='hyp-list' class='no-list-styles'>
-            <!-- <li><div class='bordered' id='humans'>Humans</div></li>
-            <li><div class='bordered' id='greatApes'>Apes</div></li>
-            <li><div class='bordered' id='mammals'>Mammals</div></li>
-            <li><div class='bordered' id='amniotes'>Amniotes</div></li>
-            <li><div class='bordered' id='bigThree'>Big-Three</div></li>
-            <li><div class='bordered' id='animals'>Animals</div></li> -->
+        <div>
+          <h3>Tree visualization and trait-mapping</h3>
+          <h5>by Michael Trestman</h5>
+          <h5>powered by D3</h5>
+          <p>pan with arrow keys | zoom with +/-</p>
+          <p>click a node to collapse/open</p>
+          <p>click to highlight or unhighlight traits</p>
+        </div>
+        <ul id='trait-list' class='no-list-styles'>
+
         </ul>
       <div id='info-panel' class='panel '>
 
@@ -66,15 +66,47 @@
   <script src="./treeData2.js"></script>
   <script type="text/javascript" src='dynamic-style.js'></script>
   <script type="text/javascript" src='mapStuff.js'></script>
+  <script type="text/javascript" src = './TraitMapDisplay-displayTraitColorRings.js'></script>
   <script type="text/javascript" src='treeLayout.js'>
   </script>
   <script type="text/javascript" src='view-pan.js'></script>
   <script type="text/javascript">
 
     TraitMapDisplay.mapSimpleTraitAttributions();
-    // update();
-    TraitMapDisplay.traitColorRings();
+    update(TraitMapper.getMappedTree());
+    // TraitMapDisplay.displayTraitColorRings([
+        // 'flight'
+      // ]);
 
+
+    var traitList = d3.select('#trait-list');
+
+    var colorsNotDisplayed = [];
+
+    TraitMapDisplay.SimpleTraitAttributions.forEach(function(traitAttr){
+
+      traitList.append('li')
+        .attr('id', 'li-' + traitAttr.name)
+        .style('color', colors[traitAttr.name])
+        .text(traitAttr.name)
+
+        .on("click", function(){
+
+          var clickedTrait = TraitMapDisplay.SimpleTraitAttributions.filter(function(x){
+              return x.name == this.id.replace('li-', '')
+            }.bind(this))[0];
+          if (clickedTrait.active) {
+            clickedTrait.active = false;
+          } else {
+            clickedTrait.active = true;
+          }
+
+          console.log(clickedTrait);
+
+          update(TraitMapper.getMappedTree());
+
+        });
+    })
 
   </script>
 

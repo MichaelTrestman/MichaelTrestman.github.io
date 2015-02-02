@@ -43,12 +43,14 @@ function processKeyPress(evt)
       break;
     case zoomIn:
       evt.preventDefault();
-      viewBoxValues[2] -= 5;
+      viewBoxValues[2] -= 15;
+      viewBoxValues[3] -= 15;
       // viewBoxValues[3] += 1;
       break;
     case zoomOut:
       evt.preventDefault();
-      viewBoxValues[2] += 5;
+      viewBoxValues[2] += 15;
+      viewBoxValues[3] += 15;
       // viewBoxValues[3] -= 1;
       break;
   } // switch

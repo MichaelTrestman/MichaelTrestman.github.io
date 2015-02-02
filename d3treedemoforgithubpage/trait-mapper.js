@@ -94,7 +94,7 @@ var TraitMapper = (function(){
       recursivelyHideChildren(node);
     },
     addSize: function(size){
-      size = size ? size : 50
+      size =  10
       recursivelyAddSize(_tree, size);
     },
     getNode: function(nodeName){
