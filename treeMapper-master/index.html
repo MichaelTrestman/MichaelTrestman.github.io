@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>d3 trees</title>
+  <style type="text/css">
+    .node {
+      cursor: pointer;
+    }
+    svg {
+      background-color: rgba(190, 190, 190, 1);
+    }
+    .node circle {
+      fill: rgba(200, 200, 160, 0.9);
+      stroke: black;
+      stroke-width: 1px;
+    }
+
+    .node:hover text {
+      font-size: 40px;
+    }
+
+    .node text {
+
+      font: 12px sans-serif;
+    }
+
+    .link {
+      fill: none;
+      stroke: black;
+      stroke-width: 1px;
+    }
+    .sidebar {
+      background-color: rgb(200, 200, 180);
+      border: solid 1px black;
+      position: fixed;
+      right: 0;
+      width: 20%;
+    }
+    .bordered {
+    }
+
+  </style>
+</head>
+<body>
+  <div class='container'>
+    <div class='row panel'>
+      <div id='sidebar' class='sidebar'>
+        <p>
+          click to highlight or unhighlight traits
+        </p>
+        <ul id='hyp-list' class='no-list-styles'>
+            <!-- <li><div class='bordered' id='humans'>Humans</div></li>
+            <li><div class='bordered' id='greatApes'>Apes</div></li>
+            <li><div class='bordered' id='mammals'>Mammals</div></li>
+            <li><div class='bordered' id='amniotes'>Amniotes</div></li>
+            <li><div class='bordered' id='bigThree'>Big-Three</div></li>
+            <li><div class='bordered' id='animals'>Animals</div></li> -->
+        </ul>
+      <div id='info-panel' class='panel '>
+
+
+  <script src="./d3.v3.js"></script>
+  <script src="./trait-mapper.js"></script>
+  <script src="./treeData.js"></script>
+  <script src="./treeData2.js"></script>
+  <script type="text/javascript" src='dynamic-style.js'></script>
+  <script type="text/javascript" src='mapStuff.js'></script>
+  <script type="text/javascript" src='treeLayout.js'>
+  </script>
+  <script type="text/javascript" src='view-pan.js'></script>
+  <script type="text/javascript">
+
+    TraitMapDisplay.mapSimpleTraitAttributions();
+    // update();
+    TraitMapDisplay.traitColorRings();
+
+
+  </script>
+
+</body>
+</html>
+
