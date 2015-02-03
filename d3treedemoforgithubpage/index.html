@@ -3,42 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>d3 trees</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
   <style type="text/css">
-    .node {
-      cursor: pointer;
-    }
-    svg {
-      background-color: rgba(190, 190, 190, 1);
-    }
-    .node circle {
-      fill: rgba(200, 200, 160, 0.9);
-      stroke: black;
-      stroke-width: 1px;
-    }
-
-    .node:hover text {
-      font-size: 40px;
-    }
-
-    .node text {
-
-      font: 12px sans-serif;
-    }
-
-    .link {
-      fill: none;
-      stroke: black;
-      stroke-width: 1px;
-    }
-    .sidebar {
-      background-color: rgb(200, 200, 180);
-      border: solid 1px black;
-      position: fixed;
-      right: 0;
-      width: 20%;
-    }
-    .bordered {
-    }
 
   </style>
 </head>
@@ -46,14 +12,9 @@
   <div class='container'>
     <div class='row panel'>
       <div id='sidebar' class='sidebar'>
-        <div>
-          <h3>Tree visualization and trait-mapping</h3>
-          <h5>by Michael Trestman</h5>
-          <h5>powered by D3</h5>
-          <p>pan with arrow keys | zoom with +/-</p>
-          <p>click a node to collapse/open</p>
-          <p>click to highlight or unhighlight traits</p>
-        </div>
+        <p>
+          click to highlight or unhighlight traits
+        </p>
         <ul id='trait-list' class='no-list-styles'>
 
         </ul>
@@ -61,55 +22,22 @@
 
 
   <script src="./d3.v3.js"></script>
-  <script src="./trait-mapper.js"></script>
   <script src="./treeData.js"></script>
   <script src="./treeData2.js"></script>
-  <script type="text/javascript" src='dynamic-style.js'></script>
-  <script type="text/javascript" src='mapStuff.js'></script>
-  <script type="text/javascript" src = './TraitMapDisplay-displayTraitColorRings.js'></script>
-  <script type="text/javascript" src='treeLayout.js'>
+  <script src="./traitMapper.js"></script>
+  <script type="text/javascript" src='traitMapDisplay.js'></script>
+  <script type="text/javascript" src='traitMapDisplay-traits-taxa-and-colors.js'></script>
+  <script type="text/javascript" src = 'traitMapDisplay-displayTraitColorRings.js'></script>
+  <script type="text/javascript" src='traitMapDisplay-treeLayout.js'>
   </script>
+  <script type="text/javascript" src = 'traitMapDisplay-initialize.js'></script>
   <script type="text/javascript" src='view-pan.js'></script>
   <script type="text/javascript">
 
     TraitMapDisplay.mapSimpleTraitAttributions();
-    update(TraitMapper.getMappedTree());
-    // TraitMapDisplay.displayTraitColorRings([
-        // 'flight'
-      // ]);
-
-
-    var traitList = d3.select('#trait-list');
-
-    var colorsNotDisplayed = [];
-
-    TraitMapDisplay.SimpleTraitAttributions.forEach(function(traitAttr){
-
-      traitList.append('li')
-        .attr('id', 'li-' + traitAttr.name)
-        .style('color', colors[traitAttr.name])
-        .text(traitAttr.name)
-
-        .on("click", function(){
-
-          var clickedTrait = TraitMapDisplay.SimpleTraitAttributions.filter(function(x){
-              return x.name == this.id.replace('li-', '')
-            }.bind(this))[0];
-          if (clickedTrait.active) {
-            clickedTrait.active = false;
-          } else {
-            clickedTrait.active = true;
-          }
-
-          console.log(clickedTrait);
-
-          update(TraitMapper.getMappedTree());
-
-        });
-    })
-
+    TraitMapDisplay.initialize();
+    TraitMapDisplay.treeLayout.update(TraitMapper.getMappedTree());
   </script>
-
 </body>
 </html>
 

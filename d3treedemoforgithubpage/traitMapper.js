@@ -1,31 +1,25 @@
-
-
-// addSize(AnimalTree, 50)
-
 var TraitMapper = (function(){
+
   var _tree = null;
 
   var recursivelyAddSize = function(node, size){
-
     node.size = size;
-
     node.children.forEach(function(child){
       recursivelyAddSize(child, size)
     })
-  }
+  };
 
   var recursivelyMapTraitsToClade = function(traits, node){
-
     Object.keys(traits).forEach(function(trait){
       node[trait] = traits[trait]
     });
-
     if(node.children){
       node.children.forEach(function(child){
         recursivelyMapTraitsToClade(traits, child)
       });
     };
   };
+
   var recursivelySearchForOriginTaxaToMapFrom = function(node, originTaxa, traits){
     if (
       originTaxa.some(function(taxon){
@@ -41,38 +35,36 @@ var TraitMapper = (function(){
       };
     };
   };
+
   var recursivelyHideChildren = function(node){
     if (node.children) {
       node._children = node.children;
       node.children = null;
       node._children.forEach(function(child){
         recursivelyHideChildren(child)
-      })
-    }
-  }
-  var
-  showChildren = function(node){
+      });
+    };
+  };
+
+  var showChildren = function(node){
     if (node._children) {
       node.children = node._children;
       node._children = null;
-    }
-  }
+    };
+  };
 
   var recursivelyFindNode = function(name){
     _foundNode = null;
-
     function isNode(node, name){
       if (name == node.name){ _foundNode = node; };
       if (_foundNode) { return};
       if (node.children) {
         node.children.forEach(function(child){
           isNode(child, name);
-        })
+        });
       };
     };
-
     isNode(_tree, name);
-
     return _foundNode;
   }
 
@@ -100,7 +92,5 @@ var TraitMapper = (function(){
     getNode: function(nodeName){
       return recursivelyFindNode(nodeName)
     }
-
-  }
-
+  };
 }());

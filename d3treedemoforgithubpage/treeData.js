@@ -1,24 +1,3 @@
-
-
-
-/*
-	ok so what needs to happen is that:
-		in the database, taxa are stored with all of the information needed to generate the visualization:
-
-			something to scale with--species diversity? that sounds good. maybe age? ideally you can tweak these for the visualization.
-
-			whatever additional trait data to display (optional really)
-				-publication mentions,
-				-hypotheses about consciousness...
-
-			then just hierarchy of relations i guess.
-
-			so then you need to write a script to generate a json to power the d3 visualization based on info from the db. not too hard.
-
-				so maybe it shows the supertaxon and sisters and children of the target taxon, that's all; clicking on a taxon will recenter the display on that taxon, with the info about publications and shit off in a separate display tab on the right.
-
-
-*/
 var AnimalTree = {
   "name": "Animals",
   "species-diversity": "unknown",
@@ -714,20 +693,68 @@ var AnimalTree = {
   	  	  	  	  	  	  "taxon-age": "unknown",
   	  	  	  	  	  	  "taxon-age-source": "unknown",
   	  	  	  	  	  	  "children": [
-  	  	  	  	  	  	  	{
-  	  	  	  	  	  	  	  "name": "Birds",
-  	  	  	  	  	  	  	  "species-diversity": "unknown",
-  	  	  	  	  	  	  	  "species-diversity-source": "unknown",
-  	  	  	  	  	  	  	  "taxon-age": "unknown",
-  	  	  	  	  	  	  	  "taxon-age-source": "unknown",
-  	  	  	  	  	  	  	  "children": [],
-  	  	  	  	  	  	  	}
+                            {
+                              "name": "Therapods",
+                              "species-diversity": "unknown",
+                              "species-diversity-source": "unknown",
+                              "taxon-age": "unknown",
+                              "taxon-age-source": "unknown",
+                              "children": [
+                                {
+                                  "name": "Birds",
+                                  "species-diversity": "unknown",
+                                  "species-diversity-source": "unknown",
+                                  "taxon-age": "unknown",
+                                  "taxon-age-source": "unknown",
+                                  "children": [],
+                                }
+                              ],
+                            },
+                            {
+                              "name": "Sauropods",
+                              "species-diversity": "unknown",
+                              "species-diversity-source": "unknown",
+                              "taxon-age": "unknown",
+                              "taxon-age-source": "unknown",
+                              "children": [],
+                            },
+                            {
+                              "name": "Ornithischia",
+                              "species-diversity": "unknown",
+                              "species-diversity-source": "unknown",
+                              "taxon-age": "unknown",
+                              "taxon-age-source": "unknown",
+                              "children": [],
+                            }
+
+
+
+
+
 
   	  	  	  	  	  	  ],
   	  	  	  	  	  	}
 
   	  	  	  	  	  ],
-  	  	  	  	  	}
+  	  	  	  	  	},
+                    {
+                      "name": "Pterosaurs",
+                      "species-diversity": "unknown",
+                      "species-diversity-source": "unknown",
+                      "taxon-age": "unknown",
+                      "taxon-age-source": "unknown",
+                      "children": [],
+                    },
+                    {
+                      "name": "Mosasaurs",
+                      "species-diversity": "unknown",
+                      "species-diversity-source": "unknown",
+                      "taxon-age": "unknown",
+                      "taxon-age-source": "unknown",
+                      "children": [],
+                    }
+
+
 
   	  	  	  	  ],
   	  	  	  	}

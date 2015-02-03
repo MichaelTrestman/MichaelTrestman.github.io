@@ -1,0 +1,33 @@
+.node {
+  cursor: pointer;
+}
+button {
+  cursor: pointer;
+}
+button:hover {
+  background-color: white;
+}
+svg {
+  background-color: rgba(190, 190, 190, 1);
+}
+.node:hover text{
+  font-size: 40px;
+}
+
+.node text {
+  font: 12px sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke: black;
+  stroke-width: 1px;
+}
+.sidebar {
+  background-color: rgb(200, 200, 180);
+  border: solid 1px black;
+  position: fixed;
+  right: 0;
+  width: 20%;
+}
+
