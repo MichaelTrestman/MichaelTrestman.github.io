@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+
+<html>
+
+  <script src="vendor/jquery.js"></script>
+  <script type="text/javascript" src="js/constants.js"></script>
+  <script type="text/javascript" src="js/utils.js"></script>
+  <script type="text/javascript" src="js/boardfunctions/boardfunctions.js"></script>
+  <script type="text/javascript" src="js/boardfunctions/saveBoardToJSON.js"></script>
+  <script type="text/javascript" src="js/boardfunctions/clean.js"></script>
+  <script type="text/javascript" src="js/chessboard.js"></script>
+  <script type="text/javascript" src="js/pieceFunctions/piecefunctions.js"></script>
+  <script type="text/javascript" src="js/pieceFunctions/newPiece.js"></script>
+  <script type="text/javascript" src="js/boardFunctions/placePiece.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/chessboard.css" />
+  <link rel="stylesheet" type="text/css" href="css/pieces.css" />
+  <link rel="stylesheet" type="text/css" href="css/sidebar.css" />
+
+  <head>
+    <title>chessbaord</title>
+  </head>
+
+  <body>
+
+    <div id='sidebar'>
+      <div id='piece-picker'>
+        <div id='black-pieces-picker' class='pieces-picker vertical-row'></div>
+        <div id='white-pieces-picker' class='pieces-picker vertical-row'></div>
+      </div>
+    </div>
+
+    <div id="board" class="board"></div>
+
+    <script type="text/javascript">
+
+      var piecePickerBlack = $('#black-pieces-picker');
+      var piecePickerWhite = $('#white-pieces-picker');
+      var pieceList = ['pawn', 'knight', 'bishop', 'rook', 'queen', 'king'];
+
+      var newPiece;
+
+      pieceList.forEach(function(piece){
+
+        newPiece = BoardFunctions.placePiece(piece, 'white', piecePickerWhite);
+        $(newPiece).addClass('picker-piece');
+
+        newPiece = BoardFunctions.placePiece(piece, 'black', piecePickerBlack)
+        $(newPiece).addClass('picker-piece');
+
+      })
+
+      newPiece = BoardFunctions.placePiece('wall', 'black', piecePickerBlack);
+      $(newPiece).addClass('picker-piece');
+
+      var cfg = {
+        height: 11,
+        width: 10
+      };
+
+      ChessBoard.initialize('board', cfg).clean();
+
+    </script>
+  </body>
+</html>
