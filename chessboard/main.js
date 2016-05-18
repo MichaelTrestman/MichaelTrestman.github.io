@@ -112,7 +112,11 @@ function drag(ev) {
 
   if(!(pieceData.type == 'wall') ) {
 
-    var imgPath = $(ev.target).css('background-image').split('"')[1].split('file:///')[1];
+    var imgPath = $(ev.target).css('background-image');
+    console.log('imgPath');
+    console.log(imgPath);
+
+    imgPath = $(ev.target).css('background-image').split('"')[1].split('file:///')[1];
 
     imgPath = imgPath.split('chessboard_new/')[1]
 
