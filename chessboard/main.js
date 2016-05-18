@@ -1,4 +1,6 @@
 var BoardFunctions = {}
+var PieceFunctions = {}
+
 BoardFunctions.clean = function(args={}){
 
   $('#board').empty();
