@@ -116,7 +116,7 @@ function drag(ev) {
     console.log('imgPath');
     console.log(imgPath);
 
-    imgPath = $(ev.target).css('background-image').split('"')[1].split('file:///')[1];
+    imgPath = $(ev.target).css('background-image').split('"')[1].split(/http:\/\/|file:\/\/\/|"\)/)[1];
 
     imgPath = imgPath.split('chessboard_new/')[1]
 
