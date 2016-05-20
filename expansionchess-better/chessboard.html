@@ -2,10 +2,27 @@
 
 <html>
 
-  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="js/vendor/jquery.js"></script>
+
+  <script type="text/javascript" src="js/constants.js"></script>
+  <script type="text/javascript" src="js/utils.js"></script>
+  <script type="text/javascript" src="js/boardfunctions/boardfunctions.js"></script>
+  <script type="text/javascript" src="js/boardfunctions/saveBoardToJSON.js"></script>
+  <script type="text/javascript" src="js/boardfunctions/clean.js"></script>
+  <script type="text/javascript" src="js/chessboard.js"></script>
+  <script type="text/javascript" src="js/pieceFunctions/piecefunctions.js"></script>
+  <script type="text/javascript" src="js/pieceFunctions/newPiece.js"></script>
+
+  <script type="text/javascript" src="js/boardFunctions/placePiece.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/chessboard.css" />
+
+  <link rel="stylesheet" type="text/css" href="css/pieces.css" />
+  <link rel="stylesheet" type="text/css" href="css/sidebar.css" />
+
+<!--
   <link rel="stylesheet" type="text/css" href="main.css" />
   <script type="text/javascript" src="main.js"></script>
-
+ -->
   <head>
     <title>chessbaord</title>
   </head>
@@ -88,8 +105,10 @@
       }
       $(document).on('keypress', function(e){
         console.log(e.keyCode);
+        if (e.keyCode == 114) {
+          BoardFunctions.rotateBoard();
+        }
       })
-
 
     </script>
   </body>
