@@ -14,8 +14,6 @@ BoardFunctions.clean = function(args={}){
     config = args
   }
 
-
-
   containerDiv = this.containerDiv;
 
   var selector = '#' + containerDiv;
@@ -50,8 +48,6 @@ BoardFunctions.clean = function(args={}){
         .attr('draggable', 'false')
         .attr('data-posX', j)
         .attr('data-posY', i)
-        .on('drop', drop)
-        .on('dragover', allowDrop)
         .on('click', BoardFunctions.squareClick);
 
       thisRow.append(thisSquare);

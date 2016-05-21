@@ -19,45 +19,17 @@ PieceFunctions.clearActiveSquaresAndPieces = function(){
 
 
 PieceFunctions.highlightOnlyHomeSpace = function($piece){
-	PieceFunctions.clearActiveSquaresAndPieces();
 	$piece.parent('.square').addClass('active-home-square')
 }
 
 
-PieceFunctions.activate = function($piece){
-
-	PieceFunctions.highlightOnlyHomeSpace($piece);
-	$piece.addClass('piece-active');
-
-	var side = $piece.data('side');
-	if (!side) throw "no side determined!"
-		var type = $piece.data('type');
-	if (!type) throw "no type determined!"
-
-	if (!PieceFunctions.highLightAvailableMoves[type]) throw "no moves available for this type!";
-
-	PieceFunctions.highLightAvailableMoves[type]( $piece );
-
-}
 
 PieceFunctions.friendlyPiece = function($targetPiece){
-	console.log('friendly piece???')
 
-	console.log('$targetPiece')
 	console.log($targetPiece)
+	$activePiece = $('div.piece.piece-active');
 
-
-	console.log("$('.piece-active')")
-	console.log($('.piece-active'))
-
-
-	console.log("$('.piece-active').data('side')")
-	console.log($('.piece-active').data('side'))
-
-	console.log("$targetPiece.data('side')")
-	console.log($targetPiece.data('side'))
-
-	if ($('.piece-active').length > 0){
+	if ($activePiece.length > 0){
 		return $('.piece-active').data('side') == $targetPiece.data('side');
 	}
 
@@ -92,7 +64,7 @@ PieceFunctions.trySquare = function($origSquare, $piece, direction, coordinates,
 
 	$targetPiece = $targetSquare.children('.piece')
 
-	if (PieceFunctions.friendlyPiece($targetPiece) ) return null ;
+	if ( PieceFunctions.friendlyPiece($targetPiece) || $targetPiece.data('type') == 'wall' ) return null ;
 
 	var targetPiecePresent = !!$targetPiece[0] ;
 
@@ -339,6 +311,18 @@ BoardFunctions.squareSelector = {
 	SouthEastOf: function(coordinates){ return $('.square[data-posx="' + (coordinates.x + 1) + '"][data-posy="'+ (coordinates.y - 1) +'"]' )},
 	NorthWestOf: function(coordinates){ return $('.square[data-posx="' + (coordinates.x - 1) + '"][data-posy="'+ (coordinates.y + 1) +'"]' )},
 	SouthWestOf: function(coordinates){ return $('.square[data-posx="' + (coordinates.x - 1) + '"][data-posy="'+ (coordinates.y - 1) +'"]' )}
+}
+
+
+PieceFunctions.movePiece = function($activePiece, $square){
+    var side = $activePiece.data('side');
+    var type = $activePiece.data('type');
+
+    $activePiece.remove();
+    BoardFunctions.placePiece(type, side, $square)
+    PieceFunctions.clearActiveSquaresAndPieces();
+    BoardFunctions.changeTurn();
+
 }
 
 

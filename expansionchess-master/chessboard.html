@@ -14,6 +14,10 @@
   <script type="text/javascript" src="js/pieceFunctions/newPiece.js"></script>
 
   <script type="text/javascript" src="js/boardFunctions/placePiece.js"></script>
+  
+  <script type="text/javascript" src="js/boardFunctions/squareClick.js"></script>
+  
+  <script type="text/javascript" src="js/pieceFunctions/activate.js"></script>
   <link rel="stylesheet" type="text/css" href="css/chessboard.css" />
 
   <link rel="stylesheet" type="text/css" href="css/pieces.css" />
@@ -39,6 +43,8 @@
     <div id='rightSidebar'>
     </div>
     <script type="text/javascript">
+
+
       var $rightSidebar = $('#rightSidebar')
 
       $rotateButton = $('<div class="rotate-button">Rotate Board</div>')
@@ -61,11 +67,17 @@
 
     </script>
 
-
+    <div class='turn-display'><h1>Start Game!</h1></div>
     <div id="board" class="board"></div>
 
     <script type="text/javascript">
 
+      $('.turn-display').on('click', function(e){
+        BoardFunctions.changeTurn();
+        $(e.target).off('click');
+      })
+
+      var sides = BoardFunctions.sides;
 
       var piecePickerBlack = $('#black-pieces-picker');
       var piecePickerWhite = $('#white-pieces-picker');
@@ -73,8 +85,8 @@
 
       var newPiece;
 
-      pieceList.forEach(function(piece){
 
+      pieceList.forEach(function(piece){
         newPiece = BoardFunctions.placePiece(piece, 'white', piecePickerWhite);
         $(newPiece).addClass('picker-piece');
 
@@ -83,8 +95,11 @@
 
       })
 
-      newPiece = BoardFunctions.placePiece('wall', 'black', piecePickerBlack);
+      newPiece = BoardFunctions.placePiece('wall', 'null', piecePickerBlack);
       $(newPiece).addClass('picker-piece');
+
+      </script>
+      <script type="text/javascript">
 
       var cfg = {
         height: 11,

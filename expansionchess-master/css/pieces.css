@@ -1,92 +1,89 @@
-
-
 .piece {
-  height: 100%;
-  width: 100%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+
+  height: 80%;
+  width: 80%;
 }
-.piece-picker-button {
-  height: 10px;
-  width: 10px;
-}
-.side-white.piece-pawn {
-  background-image: url('../img/chesspieces/wikipedia/wP.png');
-      background-size: 50px 50px;
-    background-repeat: no-repeat;
-}
+
+
 .piece-wall {
   background-color: rgba(102,51,0,1);
-  background-size: 50px 50px;
+  /*background-size: 10px 10px;*/
   background-repeat: no-repeat;
 }
 
 .side-white.piece-pawn {
   background-image: url('../img/chesspieces/wikipedia/wP.png');
-      background-size: 50px 50px;
-    background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
 }
+
 
 .side-black.piece-pawn {
   background-image: url('../img/chesspieces/wikipedia/bP.png');
-      background-size: 50px 50px;
-    background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
 }
 
 .side-white.piece-knight {
   background-image: url('../img/chesspieces/wikipedia/wN.png');
-      background-size: 50px 50px;
-    background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
 }
 
 .side-black.piece-knight {
   background-image: url('../img/chesspieces/wikipedia/bN.png');
-      background-size: 50px 50px;
-    background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
 }
 
 .side-white.piece-bishop {
   background-image: url('../img/chesspieces/wikipedia/wB.png');
-      background-size: 50px 50px;
-    background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
 }
 
 .side-black.piece-bishop {
   background-image: url('../img/chesspieces/wikipedia/bB.png');
-      background-size: 50px 50px;
-    background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
 }
 
 .side-white.piece-rook {
   background-image: url('../img/chesspieces/wikipedia/wR.png');
-      background-size: 50px 50px;
-    background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
 }
 
 .side-black.piece-rook {
   background-image: url('../img/chesspieces/wikipedia/bR.png');
-      background-size: 50px 50px;
-    background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
 }
 
 .side-white.piece-queen {
   background-image: url('../img/chesspieces/wikipedia/wQ.png');
-      background-size: 50px 50px;
-    background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
 }
 
 .side-black.piece-queen {
   background-image: url('../img/chesspieces/wikipedia/bQ.png');
-      background-size: 50px 50px;
-    background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
 }
 
 .side-white.piece-king {
   background-image: url('../img/chesspieces/wikipedia/wK.png');
-      background-size: 50px 50px;
-    background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
 }
 
 .side-black.piece-king {
   background-image: url('../img/chesspieces/wikipedia/bK.png');
-      background-size: 50px 50px;
-    background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
 }

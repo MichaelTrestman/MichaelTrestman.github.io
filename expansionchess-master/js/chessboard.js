@@ -18,22 +18,7 @@ ChessBoard = (function(){
     setWallsAndPieces: function(wallSetup, pieceSetup){
       console.log('setWallsAndPieces')
       return this
-    },
-
-    setWalls: function(){
-      console.log('setWalls')
-      return this
-    },
-
-    setPiecesInteractively: function(){
-      console.log('setPiecesInteractively')
-      return this
-    },
-
-    getTurn: function(){ return turn},
-
-    setTurn: function(side){ turn = side}
-
+    }
   }
 
 })();
