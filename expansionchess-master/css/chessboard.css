@@ -1,6 +1,6 @@
 .board {
   margin: 10%;
-  border: solid 4px black;
+  border: solid 1px black;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -17,22 +17,24 @@
 
   height: 50px;
   width: 50px;
-  border: solid 4px white;
+  border: solid 1px black;
 }
 
 .square.movable {
-  border: solid 4px purple;
+  /*border: solid 1px purple;*/
+  background-color: yellow;
 }
 
 .square.killable {
- 
-  border: solid 4px red;
+  background-color: red;
+  /*border: solid 1px red;*/
 }
 .square.movable:hover, .square.movable:hover {
- border: solid 4px gold;
+ border: solid 1px red;
 }
 .square.active-home-square {
-  border: solid 4px orange;
+  border: solid 1px orange;
+  background-color: gold;
 }
 
 .square-dark {
@@ -40,4 +42,8 @@
 }
 .square-light {
   background-color: darkgray;
+}
+
+.square-upgrade {
+  background-color: gold;
 }

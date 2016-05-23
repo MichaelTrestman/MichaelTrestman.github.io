@@ -20,25 +20,19 @@ BoardFunctions.changeTurn = function(){
 
     currentSide = BoardFunctions.sides[0];
 
-    while ( currentSide == 'red' || currentSide == 'blue' || BoardFunctions.hasNoPieces(currentSide) ) {
+    while ( $('div.piece.side-'+currentSide).length == 0) {
         console.log('change turns cus no pieces on:' + currentSide)
-        
+
         tmp = BoardFunctions.sides.shift();
         BoardFunctions.sides.push(tmp);
 
         currentSide = BoardFunctions.sides[0];
 
-        
+
     }
 
     BoardFunctions.setTurn(BoardFunctions.sides[0])
 }
-
-
-BoardFunctions.hasNoPieces = function(side){
-    $('div.piece.side-'+side).length == 0;
-}
-
 
 
 

@@ -5,6 +5,8 @@
   <script type="text/javascript" src="js/vendor/jquery.js"></script>
 
   <script type="text/javascript" src="js/constants.js"></script>
+  <script type="text/javascript" src="boards/someBoards.js"></script>
+
   <script type="text/javascript" src="js/utils.js"></script>
   <script type="text/javascript" src="js/boardfunctions/boardfunctions.js"></script>
   <script type="text/javascript" src="js/boardfunctions/saveBoardToJSON.js"></script>
@@ -14,9 +16,9 @@
   <script type="text/javascript" src="js/pieceFunctions/newPiece.js"></script>
 
   <script type="text/javascript" src="js/boardFunctions/placePiece.js"></script>
-  
+
   <script type="text/javascript" src="js/boardFunctions/squareClick.js"></script>
-  
+
   <script type="text/javascript" src="js/pieceFunctions/activate.js"></script>
   <link rel="stylesheet" type="text/css" href="css/chessboard.css" />
 
@@ -33,13 +35,13 @@
 
   <body>
 
-    <div id='sidebar'>
+    <!-- <div id='sidebar'>
       <div id='piece-picker'>
         <div id='black-pieces-picker' class='pieces-picker vertical-row'></div>
         <div id='white-pieces-picker' class='pieces-picker vertical-row'></div>
       </div>
     </div>
-
+ -->
     <div id='rightSidebar'>
     </div>
     <script type="text/javascript">
@@ -68,6 +70,7 @@
     </script>
 
     <div class='turn-display'><h1>Start Game!</h1></div>
+    <div id='edit-button' class='edit-button'><h1>Edit</h1></div>
     <div id="board" class="board"></div>
 
     <script type="text/javascript">
@@ -77,26 +80,47 @@
         $(e.target).off('click');
       })
 
-      var sides = BoardFunctions.sides;
-
-      var piecePickerBlack = $('#black-pieces-picker');
-      var piecePickerWhite = $('#white-pieces-picker');
-      var pieceList = ['pawn', 'knight', 'bishop', 'rook', 'queen', 'king'];
-
-      var newPiece;
-
-
-      pieceList.forEach(function(piece){
-        newPiece = BoardFunctions.placePiece(piece, 'white', piecePickerWhite);
-        $(newPiece).addClass('picker-piece');
-
-        newPiece = BoardFunctions.placePiece(piece, 'black', piecePickerBlack)
-        $(newPiece).addClass('picker-piece');
-
+      $('#edit-button').on('click', function(e){
+        BoardFunctions.setTurn('edit');
+        BoardFunctions.editing = !!!BoardFunctions.editing;
+        $(e.target).off('click');
       })
 
-      newPiece = BoardFunctions.placePiece('wall', 'null', piecePickerBlack);
-      $(newPiece).addClass('picker-piece');
+      // var sides = BoardFunctions.sides;
+
+      // var piecePickerBlack = $('#black-pieces-picker');
+      // var piecePickerWhite = $('#white-pieces-picker');
+      // var pieceList = ['pawn', 'knight', 'bishop', 'rook', 'queen', 'king'];
+
+      // var newPiece;
+
+
+      // pieceList.forEach(function(piece){
+
+      //   newPiece = BoardFunctions.placePiece(piece, 'white', piecePickerWhite);
+      //   $(newPiece).addClass('picker-piece');
+
+      //   newPiece = BoardFunctions.placePiece(piece, 'black', piecePickerBlack)
+      //   $(newPiece).addClass('picker-piece');
+
+      // })
+
+      // newPiece = BoardFunctions.placePiece('wall', 'null', piecePickerBlack);
+      // $(newPiece).addClass('picker-piece');
+
+      // $('div.piecker-piece').click(function (e) {
+
+      //   var side = e.target.dataset.side;
+      //   var type = e.target.dataset.type;
+
+      //   PieceFunctions.pieceToPlace = {
+      //     side: side,
+      //     type: type
+      //   }
+
+      //   $pickerPiece = $(e.target);
+
+      // })
 
       </script>
       <script type="text/javascript">

@@ -16,12 +16,24 @@ BoardFunctions.saveBoardToJSON = function(){
       side: piece.dataset.side
     }
   })
+
+  var $upgradeSquares = $('.square-upgrade');
+  board.upgradeSquares = $.map($upgradeSquares, function($square,i){
+    return {
+      posx: $square[0].dataset.posx,
+      posy: $square[0].dataset.posy,
+      type: $square[0].dataset.type,
+      side: $square[0].dataset.side
+    }
+  })
+
   return JSON.stringify(board)
 }
 
 BoardFunctions.loadBoardFromJSON = function(boardJSON){
   var board = JSON.parse(boardJSON);
   var pieces = board.pieces;
+  var upgradeSpaces = board.upgradeSquares || [];
 
   BoardFunctions.clearBoard();
 
@@ -34,17 +46,23 @@ BoardFunctions.loadBoardFromJSON = function(boardJSON){
     var targetSquareSelector = '.square[data-posx="' + piece.posx + '"][data-posy="' + piece.posy +'"]';
 
     var $targetSquare = $(targetSquareSelector);
-    // console.log('targetSquare selector:')
-    // console.log(targetSquareSelector);
-
-    // console.log('$targetSquare')
-    // console.log($targetSquare)
 
     BoardFunctions.placePiece(piece.type, piece.side, $targetSquare);
 
   })
 
+  upgradeSpaces.forEach(function(upgradeSpace){
+        var upgradeSpaceSelector = '.square[data-posx="' + upgradeSpace.posx + '"][data-posy="' + upgradeSpace.posy +'"]';
+
+        $upgradeSquares = $(upgradeSpaceSelector);
+        console.log("$upgradeSquares");
+        console.log($upgradeSquares);
+        $upgradeSquares.addClass('square-upgrade');
+
+  })
+
 }
+
 BoardFunctions.clearBoard = function(){
   $('#board').empty();
 }
